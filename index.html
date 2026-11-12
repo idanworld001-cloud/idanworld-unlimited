@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDANWORLD UNLIMITED</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f2f6fc;color:#17243b}
+header{background:#071b49;color:white;text-align:center;padding:30px 15px}
+.logo{font-size:35px;font-weight:bold;color:#f3c34e;border:3px solid #f3c34e;border-radius:50%;width:80px;height:80px;margin:auto;display:grid;place-items:center}
+h1{font-size:27px}
+header p{color:#bce5ff}
+nav{background:white;padding:14px;text-align:center;position:sticky;top:0}
+nav a{display:inline-block;margin:5px;color:#071b49;text-decoration:none;font-weight:bold;font-size:13px}
+.hero{background:linear-gradient(120deg,#071b49,#1678d2);color:white;text-align:center;padding:45px 20px}
+section{background:white;margin:15px;padding:22px;border-radius:12px}
+h2{color:#071b49}
+.card{background:#edf5ff;padding:15px;margin:10px 0;border-radius:9px}
+.btn{display:inline-block;background:#f3c34e;color:#071b49;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px}
+label{display:block;margin-top:12px;font-weight:bold}
+input,select,textarea{width:100%;padding:12px;margin-top:5px;border:1px solid #ccc;border-radius:7px;font-size:15px}
+textarea{height:100px}
+button{border:0;cursor:pointer}
+footer{background:#071b49;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">IW</div>
+<h1>IDANWORLD UNLIMITED</h1>
+<p>INNOVATE • CREATE • INSPIRE</p>
+</header>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#services">SERVICES</a>
+<a href="#order">ORDER</a>
+<a href="#tv">IDANWORLD TV</a>
+<a href="#stories">STORIES</a>
+<a href="#about">ABOUT</a>
+</nav>
+
+<div class="hero" id="home">
+<h2 style="color:white">WELCOME TO IDANWORLD UNLIMITED</h2>
+<p>Your creative world of design, editing and storytelling.</p>
+<a class="btn" href="#order">PLACE AN ORDER</a>
+<a class="btn" href="https://wa.me/2349059420632">WHATSAPP</a>
+</div>
+
+<section id="services">
+<h2>OUR SERVICES</h2>
+<div class="card"><h3>Graphic Design</h3><p>Flyers, banners, posters and logos.</p></div>
+<div class="card"><h3>Photo Editing</h3><p>Creative photo editing and picture enhancement.</p></div>
+<div class="card"><h3>Video Editing</h3><p>Professional video editing and creative videos.</p></div>
+<div class="card"><h3>Name Editing</h3><p>Beautiful personalised name designs.</p></div>
+</section>
+
+<section id="order">
+<h2>PLACE AN ORDER</h2>
+<form onsubmit="sendOrder(event)">
+<label>Your Name</label>
+<input id="name" required>
+
+<label>Select Service</label>
+<select id="service" required>
+<option value="">Choose service</option>
+<option>Graphic Design</option>
+<option>Photo Editing</option>
+<option>Video Editing</option>
+<option>Name Editing</option>
+<option>Other</option>
+</select>
+
+<label>Describe Your Order</label>
+<textarea id="details" required></textarea>
+
+<label>Choose Picture (optional)</label>
+<input type="file" id="photo" accept="image/*">
+
+<p><small>After WhatsApp opens, attach your picture in the chat if needed.</small></p>
+<button class="btn" type="submit">SEND ORDER ON WHATSAPP</button>
+</form>
+</section>
+
+<section id="tv">
+<h2>IDANWORLD TV</h2>
+<p>Watch our videos on YouTube.</p>
+<a class="btn" href="https://youtube.com/@idanworldtv">VISIT YOUTUBE</a>
+<br>
+<a class="btn" href="https://www.tiktok.com/@idanworld001">FOLLOW ON TIKTOK</a>
+</section>
+
+<section id="stories">
+<h2>IDANWORLD STORIES</h2>
+<div class="card">
+<h3>TRUE LOVE AND HARD WORKING</h3>
+<p>A story of dignity, opportunity, and hard work by IDANWORLD.</p>
+<p>More exciting stories coming soon!</p>
+</div>
+</section>
+
+<section id="about">
+<h2>ABOUT US</h2>
+<p>IDANWORLD UNLIMITED is a creative brand focused on graphic design, photo editing, video editing and storytelling.</p>
+<p><b>Founder:</b> IDOWU</p>
+</section>
+
+<section id="contact">
+<h2>CONTACT US</h2>
+<p>WhatsApp: 09059420632</p>
+<p>Email: idanworld001@gmail.com</p>
+<a class="btn" href="https://wa.me/2349059420632">CONTACT US</a>
+</section>
+
+<footer>
+<p>© IDANWORLD UNLIMITED</p>
+<p>INNOVATE • CREATE • INSPIRE</p>
+</footer>
+
+<script>
+function sendOrder(e){
+e.preventDefault();
+let n=document.getElementById('name').value;
+let s=document.getElementById('service').value;
+let d=document.getElementById('details').value;
+let msg="Hello IDANWORLD UNLIMITED. I want to place an order.%0AName: "+encodeURIComponent(n)+"%0AService: "+encodeURIComponent(s)+"%0ADetails: "+encodeURIComponent(d);
+window.open("https://wa.me/2349059420632?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
